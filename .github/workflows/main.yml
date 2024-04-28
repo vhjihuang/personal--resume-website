@@ -2,9 +2,9 @@ name: personal-resume
 on: push
 jobs: 
   job1: 
-    step: 
+    steps: 
     - run: pwd
     - run: ls
   job2:
-    step: 
+    steps: 
     - run: node --version
