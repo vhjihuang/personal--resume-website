@@ -2,12 +2,9 @@ name: personal-resume
 on: push
 
 jobs: 
-  job1: 
+  pnpm-build:
     runs-on: ubuntu-latest
-    steps: 
-    - run: pwd
-    - run: ls
-  job2:
-    runs-on: windows-latest
     steps:
-    - run: node --version
+    - uses: actions/checkout@v4
+    - run: pnpm install
+    - run: pnpm run build
