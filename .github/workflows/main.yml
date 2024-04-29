@@ -14,5 +14,4 @@ jobs:
         run_install: true
 
     - name: Build PersonalResume site
-      run: pnpm install
-      run: pnpm run build
+      run: pnpm build
