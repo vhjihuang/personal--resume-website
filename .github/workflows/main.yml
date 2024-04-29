@@ -15,3 +15,9 @@ jobs:
 
     - name: Build PersonalResume site
       run: pnpm build
+    
+    - name: Deploy PersonalResume site
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: dist
