@@ -1,6 +1,9 @@
 name: personal-resume
 on: push
 
+permissions:
+  contents: write
+
 jobs: 
   pnpm-build:
     runs-on: ubuntu-latest
