@@ -1,0 +1,53 @@
+// 移动端导航栏
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+  padding: env(safe-area-inset-bottom) 1rem 1rem;
+  z-index: 50;
+  
+  @supports not (backdrop-filter: blur(10px)) {
+    background: rgba(10, 25, 47, 0.98);
+  }
+}
+
+// 移动端卡片
+.mobile-card {
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// 移动端列表
+.mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  
+  > * {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+// 移动端按钮
+.mobile-button {
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  touch-action: manipulation;
+  user-select: none;
+  transition: transform 0.2s;
+  
+  &:active {
+    transform: scale(0.98);
+  }
+} 

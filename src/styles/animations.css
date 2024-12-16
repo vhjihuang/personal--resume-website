@@ -1,0 +1,40 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.scroll-animation {
+  @apply opacity-0 transition-transform duration-300 ease-out transform;
+}
+
+.fade-up {
+  @apply translate-y-8;
+}
+
+.slide-right {
+  @apply translate-x-8;
+}
+
+.rotate-animation {
+  @apply animate-float;
+}
+
+.show {
+  @apply opacity-100 translate-y-0 translate-x-0 duration-500 motion-safe:animate-scale;
+}
+
+.hover-float {
+  @apply transition-transform hover:translate-y-[-4px] duration-300;
+}
+
+.hover-scale {
+  @apply transition-transform hover:scale-105 active:scale-95 duration-300;
+}
+
+.hover-glow {
+  @apply transition-all hover:brightness-110 hover:shadow-lg duration-300;
+}
+
+.hover-rotate {
+  @apply transition-transform hover:rotate-3 duration-300;
+} 

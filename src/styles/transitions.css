@@ -1,0 +1,28 @@
+/* 语言切换过渡 */
+.locale-changing * {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.5;
+}
+
+/* 页面元素过渡 */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* 下拉菜单过渡 */
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+} 

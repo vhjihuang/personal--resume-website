@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hi, I'm Huang",
+    "subtitle": "Frontend Developer",
+    "introductionShort": "I'm a passionate frontend developer with experience in building responsive and user-friendly web applications.",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My introduction",
+    "description": "Web developer with extensive knowledge and years of experience working in web technologies, delivering quality work.",
+    "years": "02+",
+    "experience": "Years experience",
+    "projects": "10+",
+    "completed": "Projects completed",
+    "hours": "200+",
+    "support": "Hours of support",
+    "downloadCV": "Download CV"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "My technical level",
+    "frontend": {
+      "title": "Frontend Developer",
+      "years": "More than 2 years"
+    },
+    "backend": {
+      "title": "Backend Developer",
+      "years": "More than 1 year"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Most recent work",
+    "viewMore": "View More"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Get in touch",
+    "call": "Call Me",
+    "email": "Email",
+    "location": "Location",
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Message sent successfully!",
+      "errors": {
+        "required": "Please fill in all fields",
+        "invalidEmail": "Please enter a valid email address",
+        "submitError": "An error occurred while sending the message"
+      }
+    }
+  },
+  "meta": {
+    "title": "Huang - Frontend Developer",
+    "description": "Personal portfolio website of Huang, a frontend developer specializing in Vue.js and modern web technologies."
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "retry": "Try again",
+    "unknown": "An unknown error occurred"
+  }
+} 

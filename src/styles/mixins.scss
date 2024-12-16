@@ -1,0 +1,81 @@
+// 响应式断点
+$breakpoints: (
+  'xs': 375px,
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px
+);
+
+// 媒体查询混合
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "未知的断点: #{$breakpoint}";
+  }
+}
+
+// 容器混合
+@mixin container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include respond-to('sm') {
+    max-width: 640px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  @include respond-to('md') {
+    max-width: 768px;
+  }
+
+  @include respond-to('lg') {
+    max-width: 1024px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  @include respond-to('xl') {
+    max-width: 1280px;
+  }
+
+  @include respond-to('2xl') {
+    max-width: 1536px;
+  }
+}
+
+// 响应式字体大小
+@mixin responsive-font($min-size, $max-size) {
+  font-size: clamp(#{$min-size}, #{($max-size - $min-size) * 100 / 1920}vw + #{$min-size}, #{$max-size});
+}
+
+// 移动端性能优化
+@mixin mobile-performance {
+  @media (max-width: 640px) {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    perspective: 1000px;
+  }
+}
+
+// 移动端手势支持
+@mixin touch-action {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// 移动端滚动优化
+@mixin smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+} 
